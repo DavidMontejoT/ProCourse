@@ -19,7 +19,18 @@
     </head>
 
     <body>
-        <header>
-            <h1>Cabecera Conectada</h1>
-            <!-- place navbar here -->
-        </header>
+    <nav class="navbar navbar-expand navbar-light bg-light">
+                    <div class="nav navbar-nav">
+                        <a class="nav-item nav-link active" href="index.php" aria-current="page">Inicio </a>
+                        <a class="nav-item nav-link" href="vista_alumnos.php">Alumnos</a>
+                        <a class="nav-item nav-link" href="vista_cursos.php">Cursos</a>
+                        <a class="nav-item nav-link" href="#">Cerrar Sesion</a>
+                    
+                    </div>
+                </nav>
+
+        <div class="container">
+
+                
+                
+             
