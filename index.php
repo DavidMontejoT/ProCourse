@@ -24,12 +24,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                  
+               
                 </div>
                 <div class="col-md-4">
+                <br>
+                <form action="secciones/index.php" method="post">
                   <div class="card">
                     <div class="card-header">Inicio de Sesion</div>
+
                     <div class="card-body">
+                        
                         <div class="mb-3">
                             <label for="" class="form-label">Usuario</label>
                             <input
@@ -48,16 +52,17 @@
                             <input
                                 type="password"
                                 class="form-control"
-                                name=""
-                                id=""
+                                name="contraseña"
+                                id="contraseña"
                                 aria-describedby="helpId"
                                 placeholder="password"
                             />
-                            <small id="helpId" class="form-text text-muted">Help text</small>
+                            <small id="helpId" class="form-text text-muted">Escriba su contraseña</small>
                         </div>
-                        
+                        <button type="submit" class="btn btn-primary">Iniciar sesión</button>
                         
                     </div>
+                    </form>
                     
                   </div>
                   
