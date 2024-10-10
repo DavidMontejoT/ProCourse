@@ -1,15 +1,5 @@
-
-pie.php holahola
-
-
-       
-      
-
-<header>
-            <!-- place navbar here -->
-        </header>
-        <main></main>
-        <footer>
+<footer>
+            <p>Pie de Página Conectado</p>
             <!-- place footer here -->
         </footer>
         <!-- Bootstrap JavaScript Libraries -->

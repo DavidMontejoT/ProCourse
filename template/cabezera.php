@@ -19,4 +19,7 @@
     </head>
 
     <body>
-        cabezera.php
+        <header>
+            <h1>Cabecera Conectada</h1>
+            <!-- place navbar here -->
+        </header>
