@@ -7,7 +7,7 @@ class BD
     {
         if (!isset(self::$instancia)) {
             $opciones[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
-            // Agregar el puerto 3307 explícitamente en la cadena de conexión
+            
             self::$instancia = new PDO("mysql:host=localhost;port=3307;dbname=aplicacion", "root", '', $opciones);
             echo "Conectado...";
         }

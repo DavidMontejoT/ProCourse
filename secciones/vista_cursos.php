@@ -39,25 +39,26 @@
         </div>
 
         <div class="btn-group" role="group" aria-label="Button group name">
-            <button
-                type="submit" name="agregar" value="agregar"
-                class="btn btn-success"
-            >
-                Agregar
-            </button>
-            <button
-                type="submit" name="editar" value="editar"
-                class="btn btn-warning"
-            >
-                Editar
-            </button>
-            <button
-                type="submit" name="borrar" value="borrar"
-                class="btn btn-danger"
-            >
-                Borrar
-            </button>
-        </div>
+    <button
+        type="submit" name="accion" value="agregar"
+        class="btn btn-success"
+    >
+        Agregar
+    </button>
+    <button
+        type="submit" name="accion" value="editar"
+        class="btn btn-warning"
+    >
+        Editar
+    </button>
+    <button
+        type="submit" name="accion" value="borrar"
+        class="btn btn-danger"
+    >
+        Borrar
+    </button>
+</div>
+
         
         </div>
         
@@ -93,7 +94,7 @@
                     </thead>
                     <tbody>
                         <?php foreach($listaCursos as $curso){?>
-                        <tr class="">
+                        <tr >
                             <td><?php echo $curso['id']?></td>
                             <td><?php echo $curso['nombre_curso']?></td>
                             <td>Seleccionar</td>
