@@ -1,5 +1,5 @@
 <?php include('../template/cabezera.php'); ?>
-  
+<?php include('../secciones/cursos.php'); ?>
        
 <div class="row">
             
@@ -40,19 +40,19 @@
 
         <div class="btn-group" role="group" aria-label="Button group name">
             <button
-                type="button"
+                type="submit" name="agregar" value="agregar"
                 class="btn btn-success"
             >
                 Agregar
             </button>
             <button
-                type="button"
+                type="submit" name="editar" value="editar"
                 class="btn btn-warning"
             >
                 Editar
             </button>
             <button
-                type="button"
+                type="submit" name="borrar" value="borrar"
                 class="btn btn-danger"
             >
                 Borrar
@@ -92,12 +92,13 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <?php foreach($listaCursos as $curso){?>
                         <tr class="">
-                            <td scope="row">1</td>
+                            <td><?php echo $curso['id']?></td>
+                            <td><?php echo $curso['nombre_curso']?></td>
                             <td>Seleccionar</td>
-                            <td>Sitio Web PHP</td>
                         </tr>
-                        
+                        <?php }?>
                     </tbody>
                 </table>
             </div>
