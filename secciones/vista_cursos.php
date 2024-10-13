@@ -20,6 +20,7 @@
                         class="form-control"
                         name="id"
                         id="id"
+                        value="<?php echo $id;?>"
                         aria-describedby="helpId"
                         placeholder="ID"
                     />
@@ -32,6 +33,7 @@
                 class="form-control"
                 name="nombre_curso"
                 id="nombre_curso"
+                value="<?php echo $nombre_curso?>"
                 aria-describedby="helpId"
                 placeholder="nombre del curso"
             />
@@ -72,11 +74,6 @@
 
         </form>
         
-        
-        
-        
-               
-        
 
         <div class="col-7">
             <div
@@ -97,7 +94,14 @@
                         <tr >
                             <td><?php echo $curso['id']?></td>
                             <td><?php echo $curso['nombre_curso']?></td>
-                            <td>Seleccionar</td>
+                            <td>
+                                <form action="" method="post">
+                                    <input type="hidden"name="id" id="id" value="<?php echo $curso['id']?>"/> 
+                                    <input type="submit" value="Seleccionar" name="accion" class="btn btn-info"/>
+
+                                </form>
+
+                            </td>
                         </tr>
                         <?php }?>
                     </tbody>

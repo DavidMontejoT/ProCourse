@@ -7,6 +7,7 @@ $id = isset($_POST['id']) ? $_POST['id'] : '';
 $nombre_curso = isset($_POST['nombre_curso']) ? $_POST['nombre_curso'] : '';
 $accion = isset($_POST['accion']) ? $_POST['accion'] : '';
 
+
 if (!empty($accion)) {
     switch ($accion) {
         case 'agregar':
@@ -31,11 +32,19 @@ if (!empty($accion)) {
             $consulta->bindParam(':id', $id);
             $consulta->execute();
             break;
+
+            case 'Seleccionar':
+                $sql = "SELECT * FROM cursos WHERE id = :id"; // Corregir consulta
+                $consulta = $conexionBD->prepare($sql);
+                $consulta->bindParam(':id', $id, PDO::PARAM_INT); // Validar como entero
+                $consulta->execute();
+                $cursoid = $consulta->fetch(PDO::FETCH_ASSOC);
+                $nombre_curso=$cursoid["nombre_curso"];
+                break;
     }
 }
 
-// Obtener lista de cursos
 $consulta = $conexionBD->prepare("SELECT * FROM cursos");
 $consulta->execute();
 $listaCursos = $consulta->fetchAll();
-?>
+
